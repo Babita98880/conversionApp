@@ -7,8 +7,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
-import java.math.BigDecimal
-import java.math.RoundingMode
 class MainActivity : AppCompatActivity() {
     private lateinit var inputEditText: EditText
     private lateinit var conversionFromSpinner: Spinner
@@ -114,8 +112,5 @@ class MainActivity : AppCompatActivity() {
             else -> 0.0
         }
     }
-    fun roundToTwoDecimalPlaces(value: Double): Double {
-        val bigDecimal = BigDecimal(value).setScale(2, RoundingMode.HALF_UP)
-        return bigDecimal.toDouble()
-    }
+    
 }
